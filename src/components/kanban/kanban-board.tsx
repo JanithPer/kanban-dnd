@@ -80,7 +80,8 @@ export function KanbanBoard() {
   }
 
   return (
-    <div className="flex gap-4 p-4">
+    <div className="w-full overflow-x-auto">
+    <div className="flex gap-4 p-4 min-w-[800px] max-[800px]:flex-nowrap">
       <DndContext
         collisionDetection={closestCorners}
         onDragStart={handleDragStart}
@@ -101,6 +102,7 @@ export function KanbanBoard() {
           ) : null}
         </DragOverlay>
       </DndContext>
+    </div>
     </div>
   )
 }
